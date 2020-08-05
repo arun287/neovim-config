@@ -8,14 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
     Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    " Install Gruvbox Theme
-    Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -25,6 +20,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
+    Plug 'morhetz/gruvbox'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
