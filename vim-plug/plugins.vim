@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
     Plug 'morhetz/gruvbox'
+    Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
