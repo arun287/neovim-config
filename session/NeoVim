@@ -7,18 +7,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +7 init.vim
-badd +24 vim-plug/plugins.vim
-badd +1 ~/.config/nvim/general/settings.vim
-badd +4 ~/.config/nvim/plug-config/signify.vim
-badd +15 ~/.config/nvim/plug-config/start-screen.vim
-badd +1 ~/.config/nvim/colors/carbonized-dark.vim
-badd +28 ~/.config/nvim/colors/gruvbox.vim
-badd +178 ~/.config/nvim/colors/onedark.vim
-badd +1 ~/.config/nvim/colors/airline.vim
+badd +159 ~/.config/nvim/colors/onedark.vim
+badd +38 ~/.config/nvim/autoload/airline/onedark.vim
 argglobal
 %argdel
-$argadd init.vim
 edit ~/.config/nvim/colors/onedark.vim
 set splitbelow splitright
 wincmd t
@@ -27,7 +19,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-setlocal fdm=marker
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -35,24 +27,13 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-3
-normal! zo
-37
-normal! zo
-118
-normal! zo
-168
-normal! zo
-278
-normal! zo
-603
-normal! zo
-let s:l = 175 - ((45 * winheight(0) + 13) / 27)
+silent! normal! zE
+let s:l = 65 - ((3 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-175
-normal! 059|
+65
+normal! 021|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
